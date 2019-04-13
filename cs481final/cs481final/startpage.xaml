@@ -1,0 +1,40 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cs481final.startpage">
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Silver">
+            <Label Text="Welcome to Food and Drink Recipe App!"
+               TextColor="OrangeRed"
+           HorizontalOptions="Center"
+           VerticalOptions="CenterAndExpand"/>
+            <Grid HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Button Text="Drinks" 
+                    TextColor="Silver"
+                    HorizontalOptions="Center"
+                    VerticalOptions="CenterAndExpand"
+                    Grid.Row="1"
+                    Grid.Column="0"
+                    BackgroundColor="OrangeRed"
+                    Clicked="Drink_Button_Clicked"/>
+                <Button Text="Food"
+                TextColor="Silver"
+                HorizontalOptions="Center"
+                VerticalOptions="CenterAndExpand"
+                Grid.Row="1"
+                Grid.Column="1" 
+                BackgroundColor="OrangeRed"
+                Clicked="Food_Button_Clicked"/>
+            </Grid>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

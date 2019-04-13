@@ -11,7 +11,7 @@ namespace cs481final
         {
             InitializeComponent();
 
-            MainPage = new MainPage();
+            MainPage = new NavigationPage(new startpage());
         }
 
         protected override void OnStart()

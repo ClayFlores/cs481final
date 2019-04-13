@@ -7,7 +7,7 @@ using Xamarin.Forms;
 
 namespace cs481final
 {
-    public partial class MainPage : ContentPage
+    public partial class MainPage : NavigationPage
     {
         public MainPage()
         {
