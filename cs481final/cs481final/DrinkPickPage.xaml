@@ -4,7 +4,10 @@
              x:Class="cs481final.DrinkPickPage">
     <ContentPage.Content>
         <StackLayout BackgroundColor="Silver">
-            <Entry Placeholder="What sounds good today?"/>
+            <Entry 
+                x:Name="itemToSearch"
+                Placeholder="What sounds good today?"
+                   />
             <Button Text="Search Drink Recipes"
                     BackgroundColor="OrangeRed"
                     Clicked="Find_Drink_Button_Clicked"/>
