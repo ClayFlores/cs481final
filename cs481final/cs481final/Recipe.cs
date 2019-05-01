@@ -4,8 +4,10 @@ using System.Text;
 
 namespace cs481final
 {
-    class drink
+    class Recipe
     {
+        public Dictionary<string, string>[] Meals { get; set; }
+
         public Dictionary<string, string>[] Drinks { get; set; }
     }
 }
