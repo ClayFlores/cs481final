@@ -1,6 +1,7 @@
 ﻿using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -50,8 +51,11 @@ namespace cs481final
                 await DisplayAlert("Error", "No recipe found. Check spelling", "OK");
             }
             else
+            {
                 recipe = JsonConvert.DeserializeObject<Recipe>(jsonContent);
-            
+                RecipeListView.ItemsSource = new ObservableCollection<Dictionary<string,string>>(recipe.Drinks);
+
+            }
             
         }
 
@@ -71,7 +75,10 @@ namespace cs481final
                 await DisplayAlert("Error", "No recipe found. Check spelling", "OK");
             }
             else
+            {
                 recipe = JsonConvert.DeserializeObject<Recipe>(jsonContent);
+                RecipeListView.ItemsSource = new ObservableCollection<Dictionary<string, string>>(recipe.Meals);
+            }
         }
     }
 }
