@@ -21,78 +21,35 @@
                         <ViewCell>
                             <StackLayout>
                                 <Label Text="{Binding strMeal}" FontSize="{StaticResource ezFontSize}"/>
-                                <!--<Image Resources="{Binding strMealThumb}"/>-->
-                                <Grid>
-                                    <Grid.RowDefinitions>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
-                                        <RowDefinition Height="*"/>
-                                    </Grid.RowDefinitions>
-                                    <Grid.ColumnDefinitions>
-                                        <ColumnDefinition Width="*"/>
-                                        <ColumnDefinition Width="*"/>
-                                    </Grid.ColumnDefinitions>
-                                    <!--<Label Text="Date:" Grid.Row="0" Grid.Column="0" FontSize="{StaticResource ezFontSize}" />-->
-                                    <Label Text="{Binding strIngredient1}" FontSize="{StaticResource ezFontSize}" Grid.Row="0" Grid.Column="0"/>
-                                    <Label Text="{Binding strIngredient2}" FontSize="{StaticResource ezFontSize}" Grid.Row="1" Grid.Column="0"/>
-                                    <Label Text="{Binding strIngredient3}" FontSize="{StaticResource ezFontSize}" Grid.Row="2" Grid.Column="0"/>
-                                    <Label Text="{Binding strIngredient4}" FontSize="{StaticResource ezFontSize}" Grid.Row="3" Grid.Column="0"/>
-                                    <Label Text="{Binding strIngredient5}" FontSize="{StaticResource ezFontSize}" Grid.Row="4" Grid.Column="0"/>
-                                    <Label Text="{Binding strIngredient6}" FontSize="{StaticResource ezFontSize}" Grid.Row="5" Grid.Column="0"/>
-                                    <Label Text="{Binding strIngredient7}" FontSize="{StaticResource ezFontSize}" Grid.Row="6" Grid.Column="0"/>
-                                    <Label Text="{Binding strIngredient8}" FontSize="{StaticResource ezFontSize}" Grid.Row="7" Grid.Column="0"/>
-                                    <Label Text="{Binding strIngredient9}" FontSize="{StaticResource ezFontSize}" Grid.Row="8" Grid.Column="0"/>
-                                    <Label Text="{Binding strIngredient10}" FontSize="{StaticResource ezFontSize}" Grid.Row="9" Grid.Column="0"/>
-                                    <Label Text="{Binding strIngredient11}" FontSize="{StaticResource ezFontSize}" Grid.Row="10" Grid.Column="0"/>
-                                    <Label Text="{Binding strIngredient12}" FontSize="{StaticResource ezFontSize}" Grid.Row="11" Grid.Column="0"/>
-                                    <Label Text="{Binding strIngredient13}" FontSize="{StaticResource ezFontSize}" Grid.Row="12" Grid.Column="0"/>
-                                    <Label Text="{Binding strIngredient14}" FontSize="{StaticResource ezFontSize}" Grid.Row="13" Grid.Column="0"/>
-                                    <Label Text="{Binding strIngredient15}" FontSize="{StaticResource ezFontSize}" Grid.Row="8" Grid.Column="0"/>
-                                    <Label Text="{Binding strIngredient16}" FontSize="{StaticResource ezFontSize}" Grid.Row="9" Grid.Column="0"/>
-                                    <Label Text="{Binding strIngredient17}" FontSize="{StaticResource ezFontSize}" Grid.Row="10" Grid.Column="0"/>
-                                    <Label Text="{Binding strIngredient18}" FontSize="{StaticResource ezFontSize}" Grid.Row="11" Grid.Column="0"/>
-                                    <Label Text="{Binding strIngredient19}" FontSize="{StaticResource ezFontSize}" Grid.Row="12" Grid.Column="0"/>
-                                    <Label Text="{Binding strIngredient20}" FontSize="{StaticResource ezFontSize}" Grid.Row="13" Grid.Column="0"/>
+                                <!--<Label Text="{Binding strIngredient1}" FontSize="{StaticResource ezFontSize}" />
+                                <Label Text="{Binding strIngredient2}" FontSize="{StaticResource ezFontSize}" />
+                                <Label Text="{Binding strIngredient3}" FontSize="{StaticResource ezFontSize}" />
+                                <Label Text="{Binding strIngredient4}" FontSize="{StaticResource ezFontSize}" />
+                                <Label Text="{Binding strIngredient5}" FontSize="{StaticResource ezFontSize}" />
+                                <Label Text="{Binding strIngredient6}" FontSize="{StaticResource ezFontSize}" />
+                                <Label Text="{Binding strIngredient7}" FontSize="{StaticResource ezFontSize}" />
+                                <Label Text="{Binding strIngredient8}" FontSize="{StaticResource ezFontSize}" />
+                                <Label Text="{Binding strIngredient9}" FontSize="{StaticResource ezFontSize}" />
+                                <Label Text="{Binding strIngredient10}" FontSize="{StaticResource ezFontSize}" />
+                                <Label Text="{Binding strIngredient11}" FontSize="{StaticResource ezFontSize}" />
+                                <Label Text="{Binding strIngredient12}" FontSize="{StaticResource ezFontSize}" />
+                                <Label Text="{Binding strIngredient13}" FontSize="{StaticResource ezFontSize}" />
+                                <Label Text="{Binding strIngredient14}" FontSize="{StaticResource ezFontSize}" />
+                                <Label Text="{Binding strIngredient15}" FontSize="{StaticResource ezFontSize}" />
+                                <Label Text="{Binding strIngredient16}" FontSize="{StaticResource ezFontSize}" />
+                                <Label Text="{Binding strIngredient17}" FontSize="{StaticResource ezFontSize}" />
+                                <Label Text="{Binding strIngredient18}" FontSize="{StaticResource ezFontSize}" />
+                                <Label Text="{Binding strIngredient19}" FontSize="{StaticResource ezFontSize}" />
+                                <Label Text="{Binding strIngredient20}" FontSize="{StaticResource ezFontSize}" />-->
 
-                                    <Label Text="{Binding strMeasure1}" FontSize="{StaticResource ezFontSize}" Grid.Row="0" Grid.Column="1" HorizontalOptions="Start"/>
-                                    <Label Text="{Binding strMeasure2}" FontSize="{StaticResource ezFontSize}" Grid.Row="1" Grid.Column="1" HorizontalOptions="Start"/>
-                                    <Label Text="{Binding strMeasure3}" FontSize="{StaticResource ezFontSize}" Grid.Row="2" Grid.Column="1" HorizontalOptions="Start"/>
-                                    <Label Text="{Binding strMeasure4}" FontSize="{StaticResource ezFontSize}" Grid.Row="3" Grid.Column="1" HorizontalOptions="Start"/>
-                                    <Label Text="{Binding strMeasure5}" FontSize="{StaticResource ezFontSize}" Grid.Row="4" Grid.Column="1" HorizontalOptions="Start"/>
-                                    <Label Text="{Binding strMeasure6}" FontSize="{StaticResource ezFontSize}" Grid.Row="5" Grid.Column="1" HorizontalOptions="Start"/>
-                                    <Label Text="{Binding strMeasure7}" FontSize="{StaticResource ezFontSize}" Grid.Row="6" Grid.Column="1" HorizontalOptions="Start"/>
-                                    <Label Text="{Binding strMeasure8}" FontSize="{StaticResource ezFontSize}" Grid.Row="7" Grid.Column="1" HorizontalOptions="Start"/>
-                                    <Label Text="{Binding strMeasure9}" FontSize="{StaticResource ezFontSize}" Grid.Row="8" Grid.Column="1" HorizontalOptions="Start"/>
-                                    <Label Text="{Binding strMeasure10}" FontSize="{StaticResource ezFontSize}" Grid.Row="9" Grid.Column="1" HorizontalOptions="Start"/>
-                                    <Label Text="{Binding strMeasure11}" FontSize="{StaticResource ezFontSize}" Grid.Row="10" Grid.Column="1" HorizontalOptions="Start"/>
-                                    <Label Text="{Binding strMeasure12}" FontSize="{StaticResource ezFontSize}" Grid.Row="11" Grid.Column="1" HorizontalOptions="Start"/>
-                                    <Label Text="{Binding strMeasure13}" FontSize="{StaticResource ezFontSize}" Grid.Row="12" Grid.Column="1" HorizontalOptions="Start"/>
-                                    <Label Text="{Binding strMeasure14}" FontSize="{StaticResource ezFontSize}" Grid.Row="13" Grid.Column="1" HorizontalOptions="Start"/>
-                                    <Label Text="{Binding strMeasure15}" FontSize="{StaticResource ezFontSize}" Grid.Row="8" Grid.Column="1" HorizontalOptions="Start"/>
-                                    <Label Text="{Binding strMeasure16}" FontSize="{StaticResource ezFontSize}" Grid.Row="9" Grid.Column="1" HorizontalOptions="Start"/>
-                                    <Label Text="{Binding strMeasure17}" FontSize="{StaticResource ezFontSize}" Grid.Row="10" Grid.Column="1" HorizontalOptions="Start"/>
-                                    <Label Text="{Binding strMeasure18}" FontSize="{StaticResource ezFontSize}" Grid.Row="11" Grid.Column="1" HorizontalOptions="Start"/>
-                                    <Label Text="{Binding strMeasure19}" FontSize="{StaticResource ezFontSize}" Grid.Row="12" Grid.Column="1" HorizontalOptions="Start"/>
-                                    <Label Text="{Binding strMeasure20}" FontSize="{StaticResource ezFontSize}" Grid.Row="13" Grid.Column="1" HorizontalOptions="Start"/>
-                                </Grid>
+
                                 <Label Text="{Binding strInstructions}" FontSize="{StaticResource ezFontSize}"/>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Label Text="End of Text"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

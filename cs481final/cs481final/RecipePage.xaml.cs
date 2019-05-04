@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
 using System.Linq;
 using System.Net.Http;
 using System.Text;
@@ -29,7 +30,7 @@ namespace cs481final
             {
                 drinkFetch(searchFor);
             }
-            else
+            else 
             {
                 foodFetch(searchFor);
             }
@@ -40,23 +41,23 @@ namespace cs481final
             var client = new HttpClient();
             Recipe recipe = new Recipe();
 
-            var recipeURL = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + sf;
-            var uri = new Uri(recipeURL);
+            var recipeurl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + sf;
+            var uri = new Uri(recipeurl);
 
             var response = await client.GetAsync(uri);
-            var jsonContent = await response.Content.ReadAsStringAsync();
+            var jsoncontent = await response.Content.ReadAsStringAsync();
 
-            if (jsonContent == "{\"drinks\":null}")
+            if (jsoncontent == "{\"drinks\":null}")
             {
-                await DisplayAlert("Error", "No recipe found. Check spelling", "OK");
+                await DisplayAlert("error", "no recipe found. check spelling", "ok");
             }
             else
             {
-                recipe = JsonConvert.DeserializeObject<Recipe>(jsonContent);
-                RecipeListView.ItemsSource = new ObservableCollection<Dictionary<string,string>>(recipe.Drinks);
+                recipe = JsonConvert.DeserializeObject<Recipe>(jsoncontent);
+                //RecipeListView.ItemsSource = new ObservableCollection<string>(recipe.Drinks.Values);
 
             }
-            
+
         }
 
         public async void foodFetch(string sf)
@@ -70,14 +71,24 @@ namespace cs481final
             var response = await client.GetAsync(uri);
             var jsonContent = await response.Content.ReadAsStringAsync();
 
-            if (jsonContent == "{\"meals\":null}") // this may not be correct
+            if (jsonContent == "{\"meals\":null}") 
             {
-                await DisplayAlert("Error", "No recipe found. Check spelling", "OK");
+                await DisplayAlert("Error", "No recipe found. Possibly check spelling", "OK");
             }
             else
             {
+
                 recipe = JsonConvert.DeserializeObject<Recipe>(jsonContent);
-                RecipeListView.ItemsSource = new ObservableCollection<Dictionary<string, string>>(recipe.Meals);
+                // pick first then show recipe?
+
+                
+                RecipeListView.ItemsSource = new ObservableCollection<Meal>(recipe.Meals);
+                
+
+                //StockListView.ItemsSource = new ObservableCollection<TimeSeriesDaily>(stockData.TSD.Values)
+                // array of dictionaries?
+
+                //recipe.Meals["mealStr"];
             }
         }
     }
