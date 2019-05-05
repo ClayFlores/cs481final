@@ -7,8 +7,14 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout BackgroundColor="Silver">
+            <Grid BackgroundColor="OrangeRed">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Text="Mix and Batch" TextColor="White" FontSize="{StaticResource ezFontSize}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0"/>
+            </Grid>
             <ListView x:Name="DrinkRecipeListView" RowHeight="100" SelectionMode="Single" ItemTapped="DrinkRecipeListView_ItemTapped">
-                <!--ItemSelected="OnItemSelected"--> 
+                <!--ItemSelected="OnItemSelected"-->
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
@@ -31,7 +37,6 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Label Text="Stand in for banner which may be stand in for ad" FontSize="{StaticResource ezFontSize}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

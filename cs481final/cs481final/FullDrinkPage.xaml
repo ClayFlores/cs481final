@@ -8,7 +8,7 @@
     <ContentPage.Content>
         <StackLayout BackgroundColor="Silver">
             <ScrollView>
-                <Grid>
+                <Grid >
                     <Grid.RowDefinitions>
                         <RowDefinition Height="100"/>
                         <RowDefinition Height="20"/>
@@ -26,10 +26,10 @@
                     </Grid.RowDefinitions>
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="*"/>
-                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="2*"/>
                     </Grid.ColumnDefinitions>
                     <Image x:Name="img" Source="{Binding strDrinkThumb}" WidthRequest="100" HeightRequest="100" HorizontalOptions="Start" Grid.Column="0" Grid.Row="0"/>
-                    <Label x:Name="title" Text="{Binding strDrink}" FontSize="30" Grid.Column="1" Grid.Row="0"/>
+                    <Label x:Name="title" Text="{Binding strDrink}" FontSize="30" Grid.Column="1" Grid.Row="0" VerticalOptions="Center" HorizontalOptions="Center" />
                     <Label x:Name="ing1" Text="{Binding strIngredient1}" Grid.Column="0" Grid.Row="1" FontSize="{StaticResource ezFontSize}" />
                     <Label x:Name="mea1" Text="{Binding strMeasure1}" Grid.Column="1" Grid.Row="1" FontSize="{StaticResource ezFontSize}" />
                     <Label x:Name="ing2" Text="{Binding strIngredient2}" Grid.Column="0" Grid.Row="2" FontSize="{StaticResource ezFontSize}" />

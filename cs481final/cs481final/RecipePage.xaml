@@ -7,6 +7,12 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout BackgroundColor="Silver">
+            <Grid BackgroundColor="OrangeRed">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Text="Mix and Batch" TextColor="White" FontSize="{StaticResource ezFontSize}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0"/>
+            </Grid>
             <ListView x:Name="RecipeListView" RowHeight="100" SelectionMode="Single" ItemTapped="RecipeListView_ItemTapped">
                 <ListView.ItemTemplate>
                     <DataTemplate>
@@ -33,6 +39,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+           
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

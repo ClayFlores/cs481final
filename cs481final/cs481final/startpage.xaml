@@ -7,7 +7,13 @@
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout BackgroundColor="Silver">
-            <Label Text="Welcome to Food and Drink Recipe App!"
+            <Grid BackgroundColor="OrangeRed">
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*"/>
+                </Grid.RowDefinitions>
+                <Label Text="Mix and Batch" TextColor="White" FontSize="{StaticResource ezFontSize}" HorizontalOptions="Center" VerticalOptions="Center" Grid.Row="0"/>
+            </Grid>
+            <Label Text="Welcome to Mix and Batch"
                TextColor="OrangeRed"
            HorizontalOptions="CenterAndExpand"
            VerticalOptions="CenterAndExpand"
