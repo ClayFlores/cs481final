@@ -3,25 +3,29 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="cs481final.RecipePage">
     <ContentPage.Resources>
-        <x:Double x:Key="ezFontSize">8.0</x:Double>
+        <x:Double x:Key="ezFontSize">30.0</x:Double>
     </ContentPage.Resources>
     <ContentPage.Content>
-        <StackLayout>
-            <!--<Label Text=""
-                   x:Name="recipeTitle"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
-            <Label Text=""
-                   x:Name="Directions"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" /> -->
-            <ListView x:Name="RecipeListView">
+        <StackLayout BackgroundColor="Silver">
+            <ListView x:Name="RecipeListView" RowHeight="100">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
                             <StackLayout>
-                                <Label Text="{Binding strMeal}" FontSize="{StaticResource ezFontSize}"/>
-                                <!--<Label Text="{Binding strIngredient1}" FontSize="{StaticResource ezFontSize}" />
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*"/>
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="100"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Source="{Binding strMealThumb}" WidthRequest="100" HeightRequest="100" HorizontalOptions="StartAndExpand" Grid.Column="0" Grid.Row="0"/>
+                                    <Label Text="{Binding strMeal}" FontSize="{StaticResource ezFontSize}" HorizontalOptions="StartAndExpand" Grid.Column="1" Grid.Row="0"/>
+
+                                    <Image Source="{Binding strDrinkThumb}" WidthRequest="100" HeightRequest="100" HorizontalOptions="StartAndExpand" Grid.Column="0" Grid.Row="0"/>
+                                    <Label Text="{Binding strDrink}" FontSize="{StaticResource ezFontSize}" HorizontalOptions="StartAndExpand" Grid.Column="1" Grid.Row="0"/>
+                                    <!--<Label Text="{Binding strIngredient1}" FontSize="{StaticResource ezFontSize}" />
                                 <Label Text="{Binding strIngredient2}" FontSize="{StaticResource ezFontSize}" />
                                 <Label Text="{Binding strIngredient3}" FontSize="{StaticResource ezFontSize}" />
                                 <Label Text="{Binding strIngredient4}" FontSize="{StaticResource ezFontSize}" />
@@ -41,15 +45,12 @@
                                 <Label Text="{Binding strIngredient18}" FontSize="{StaticResource ezFontSize}" />
                                 <Label Text="{Binding strIngredient19}" FontSize="{StaticResource ezFontSize}" />
                                 <Label Text="{Binding strIngredient20}" FontSize="{StaticResource ezFontSize}" />-->
-
-
-                                <Label Text="{Binding strInstructions}" FontSize="{StaticResource ezFontSize}"/>
+                                </Grid>
                             </StackLayout>
                         </ViewCell>
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-            <Label Text="End of Text"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

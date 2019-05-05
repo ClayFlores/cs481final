@@ -1,26 +1,33 @@
-﻿using Newtonsoft.Json;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 
-namespace cs481final
+namespace cs481final.Models
 {
-
-    public class Recipe
+    public class DrinkRecipe
     {
-        public List<Meal> Meals { get; set; }
+        public List<Drink> Drinks { get; set; }
     }
-    public class Meal
+
+    public class Drink
     {
-        public string idMeal { get; set; }
-        public string strMeal { get; set; }
+        public string idDrink { get; set; }
+        public string strDrink { get; set; }
         public object strDrinkAlternate { get; set; }
-        public string strCategory { get; set; }
-        public string strArea { get; set; }
-        public string strInstructions { get; set; }
-        public string strMealThumb { get; set; }
+        public object strDrinkES { get; set; }
+        public object strDrinkDE { get; set; }
+        public object strDrinkFR { get; set; }
         public string strTags { get; set; }
-        public string strYoutube { get; set; }
+        public object strVideo { get; set; }
+        public string strCategory { get; set; }
+        public string strIBA { get; set; }
+        public string strAlcoholic { get; set; }
+        public string strGlass { get; set; }
+        public string strInstructions { get; set; }
+        public object strInstructionsES { get; set; }
+        public object strInstructionsDE { get; set; }
+        public object strInstructionsFR { get; set; }
+        public string strDrinkThumb { get; set; }
         public string strIngredient1 { get; set; }
         public string strIngredient2 { get; set; }
         public string strIngredient3 { get; set; }
@@ -36,11 +43,6 @@ namespace cs481final
         public string strIngredient13 { get; set; }
         public string strIngredient14 { get; set; }
         public string strIngredient15 { get; set; }
-        public object strIngredient16 { get; set; }
-        public object strIngredient17 { get; set; }
-        public object strIngredient18 { get; set; }
-        public object strIngredient19 { get; set; }
-        public object strIngredient20 { get; set; }
         public string strMeasure1 { get; set; }
         public string strMeasure2 { get; set; }
         public string strMeasure3 { get; set; }
@@ -56,12 +58,7 @@ namespace cs481final
         public string strMeasure13 { get; set; }
         public string strMeasure14 { get; set; }
         public string strMeasure15 { get; set; }
-        public object strMeasure16 { get; set; }
-        public object strMeasure17 { get; set; }
-        public object strMeasure18 { get; set; }
-        public object strMeasure19 { get; set; }
-        public object strMeasure20 { get; set; }
-        public object strSource { get; set; }
-        public object dateModified { get; set; }
+        public string dateModified { get; set; }
     }
 }
+

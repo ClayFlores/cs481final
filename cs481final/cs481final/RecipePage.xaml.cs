@@ -1,4 +1,5 @@
-﻿using Newtonsoft.Json;
+﻿using cs481final.Models;
+using Newtonsoft.Json;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -39,7 +40,7 @@ namespace cs481final
         public async void drinkFetch(string sf)
         {
             var client = new HttpClient();
-            Recipe recipe = new Recipe();
+            DrinkRecipe recipe = new DrinkRecipe();
 
             var recipeurl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + sf;
             var uri = new Uri(recipeurl);
@@ -53,9 +54,8 @@ namespace cs481final
             }
             else
             {
-                recipe = JsonConvert.DeserializeObject<Recipe>(jsoncontent);
-                //RecipeListView.ItemsSource = new ObservableCollection<string>(recipe.Drinks.Values);
-
+                recipe = JsonConvert.DeserializeObject<DrinkRecipe>(jsoncontent);
+                RecipeListView.ItemsSource = new ObservableCollection<Drink>(recipe.Drinks);
             }
 
         }
