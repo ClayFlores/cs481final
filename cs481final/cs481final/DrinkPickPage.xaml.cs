@@ -24,7 +24,7 @@ namespace cs481final
                 await DisplayAlert("Error","Please enter a drink to search for", "Ok");
             }
             else
-                await Navigation.PushAsync(new RecipePage(itemToSearch.Text, false));
+                await Navigation.PushAsync(new DrinkRecipePage(itemToSearch.Text));
         }
     }
 }

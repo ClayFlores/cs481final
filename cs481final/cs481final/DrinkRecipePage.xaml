@@ -1,19 +1,17 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="cs481final.RecipePage">
+             x:Class="cs481final.DrinkRecipePage">
     <ContentPage.Resources>
         <x:Double x:Key="ezFontSize">30.0</x:Double>
     </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout BackgroundColor="Silver">
-            <ListView x:Name="RecipeListView" RowHeight="100" SelectionMode="Single" ItemTapped="RecipeListView_ItemTapped">
+            <ListView x:Name="DrinkRecipeListView" RowHeight="100" SelectionMode="Single" ItemTapped="DrinkRecipeListView_ItemTapped">
+                <!--ItemSelected="OnItemSelected"--> 
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>
-                            <ViewCell.ContextActions>
-                                
-                            </ViewCell.ContextActions>
                             <ViewCell.View>
                                 <StackLayout>
                                     <Grid>
@@ -24,8 +22,8 @@
                                             <ColumnDefinition Width="100"/>
                                             <ColumnDefinition Width="*"/>
                                         </Grid.ColumnDefinitions>
-                                        <Image Source="{Binding strMealThumb}" WidthRequest="100" HeightRequest="100" HorizontalOptions="StartAndExpand" Grid.Column="0" Grid.Row="0"/>
-                                        <Label Text="{Binding strMeal}" FontSize="{StaticResource ezFontSize}" HorizontalOptions="StartAndExpand" Grid.Column="1" Grid.Row="0"/>
+                                        <Image Source="{Binding strDrinkThumb}" WidthRequest="100" HeightRequest="100" HorizontalOptions="StartAndExpand" Grid.Column="0" Grid.Row="0"/>
+                                        <Label Text="{Binding strDrink}" FontSize="{StaticResource ezFontSize}" HorizontalOptions="StartAndExpand" Grid.Column="1" Grid.Row="0"/>
                                     </Grid>
                                 </StackLayout>
                             </ViewCell.View>
@@ -33,6 +31,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <Label Text="Stand in for banner which may be stand in for ad" FontSize="{StaticResource ezFontSize}"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

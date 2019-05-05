@@ -2,12 +2,16 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="cs481final.startpage">
+    <ContentPage.Resources>
+        <x:Double x:Key="ezFontSize">30.0</x:Double>
+    </ContentPage.Resources>
     <ContentPage.Content>
         <StackLayout BackgroundColor="Silver">
             <Label Text="Welcome to Food and Drink Recipe App!"
                TextColor="OrangeRed"
-           HorizontalOptions="Center"
-           VerticalOptions="CenterAndExpand"/>
+           HorizontalOptions="CenterAndExpand"
+           VerticalOptions="CenterAndExpand"
+                   FontSize="{StaticResource ezFontSize}"/>
             <Grid HorizontalOptions="Center" VerticalOptions="CenterAndExpand">
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*"/>

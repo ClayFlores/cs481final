@@ -22,42 +22,11 @@ namespace cs481final
 			InitializeComponent ();
 		}
 
-        public RecipePage(string searchFor, bool flag) // false is drink
+        public RecipePage(string searchFor) // false is drink
         {
             InitializeComponent();
-            // Test.Text = searchFor;
 
-            if (flag == false)
-            {
-                drinkFetch(searchFor);
-            }
-            else 
-            {
-                foodFetch(searchFor);
-            }
-        }
-
-        public async void drinkFetch(string sf)
-        {
-            var client = new HttpClient();
-            DrinkRecipe recipe = new DrinkRecipe();
-
-            var recipeurl = "https://www.thecocktaildb.com/api/json/v1/1/search.php?s=" + sf;
-            var uri = new Uri(recipeurl);
-
-            var response = await client.GetAsync(uri);
-            var jsoncontent = await response.Content.ReadAsStringAsync();
-
-            if (jsoncontent == "{\"drinks\":null}")
-            {
-                await DisplayAlert("error", "no recipe found. check spelling", "ok");
-            }
-            else
-            {
-                recipe = JsonConvert.DeserializeObject<DrinkRecipe>(jsoncontent);
-                RecipeListView.ItemsSource = new ObservableCollection<Drink>(recipe.Drinks);
-            }
-
+            foodFetch(searchFor);
         }
 
         public async void foodFetch(string sf)
@@ -83,13 +52,13 @@ namespace cs481final
 
                 
                 RecipeListView.ItemsSource = new ObservableCollection<Meal>(recipe.Meals);
-                
-
-                //StockListView.ItemsSource = new ObservableCollection<TimeSeriesDaily>(stockData.TSD.Values)
-                // array of dictionaries?
-
-                //recipe.Meals["mealStr"];
             }
+        }
+        private async void RecipeListView_ItemTapped(object sender, ItemTappedEventArgs e)
+        {
+            ListView lv = (ListView)sender;
+            Meal meal = lv.SelectedItem as Meal;
+            await Navigation.PushAsync(new FullMealPage(meal));
         }
     }
 }

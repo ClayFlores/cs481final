@@ -24,7 +24,7 @@ namespace cs481final
                 await DisplayAlert("Error", "Please enter a food item to search for", "Ok");
             }
             else
-                await Navigation.PushAsync(new RecipePage(itemToSearch.Text, true));
+                await Navigation.PushAsync(new RecipePage(itemToSearch.Text));
         }
     }
 }

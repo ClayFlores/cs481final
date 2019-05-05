@@ -1,0 +1,76 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="cs481final.FullMealPage">
+    <ContentPage.Resources>
+        <x:Double x:Key="ezFontSize">15.0</x:Double>
+    </ContentPage.Resources>
+    <ContentPage.Content>
+        <StackLayout BackgroundColor="Silver">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="100"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="100"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+            </Grid>
+            <Image x:Name="img" Source="..." WidthRequest="100" HeightRequest="100" HorizontalOptions="Start"  Grid.Row="0" Grid.Column="0"/>
+            <Label x:Name="title" Text="..." FontSize="30"  Grid.Row="0" Grid.Column="1"/>
+            <ScrollView>
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+                        <RowDefinition Height="20"/>
+
+                        <RowDefinition Height="*"/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label x:Name="ing1" Text="..." Grid.Column="0" Grid.Row="0" FontSize="{StaticResource ezFontSize}" />
+                    <Label x:Name="mea1" Text="..." Grid.Column="1" Grid.Row="0" FontSize="{StaticResource ezFontSize}" />
+                    <Label x:Name="ing2" Text="..." Grid.Column="0" Grid.Row="1" FontSize="{StaticResource ezFontSize}" />
+                    <Label x:Name="mea2" Text="..." Grid.Column="1" Grid.Row="1" FontSize="{StaticResource ezFontSize}" />
+                    <Label x:Name="ing3" Text="..." Grid.Column="0" Grid.Row="2" FontSize="{StaticResource ezFontSize}" />
+                    <Label x:Name="mea3" Text="..." Grid.Column="1" Grid.Row="2" FontSize="{StaticResource ezFontSize}" />
+                    <Label x:Name="ing4" Text="..." Grid.Column="0" Grid.Row="3" FontSize="{StaticResource ezFontSize}" />
+                    <Label x:Name="mea4" Text="..." Grid.Column="1" Grid.Row="3" FontSize="{StaticResource ezFontSize}" />
+                    <Label x:Name="ing5" Text="..." Grid.Column="0" Grid.Row="4" FontSize="{StaticResource ezFontSize}" />
+                    <Label x:Name="mea5" Text="..." Grid.Column="1" Grid.Row="4" FontSize="{StaticResource ezFontSize}" />
+                    <Label x:Name="ing6" Text="..." Grid.Column="0" Grid.Row="5" FontSize="{StaticResource ezFontSize}" />
+                    <Label x:Name="mea6" Text="..." Grid.Column="1" Grid.Row="5" FontSize="{StaticResource ezFontSize}" />
+                    <Label x:Name="ing7" Text="..." Grid.Column="0" Grid.Row="6" FontSize="{StaticResource ezFontSize}" />
+                    <Label x:Name="mea7" Text="..." Grid.Column="1" Grid.Row="6" FontSize="{StaticResource ezFontSize}" />
+                    <Label x:Name="ing8" Text="..." Grid.Column="0" Grid.Row="7" FontSize="{StaticResource ezFontSize}" />
+                    <Label x:Name="mea8" Text="..." Grid.Column="1" Grid.Row="7" FontSize="{StaticResource ezFontSize}" />
+                    <Label x:Name="ing9" Text="..." Grid.Column="0" Grid.Row="8" FontSize="{StaticResource ezFontSize}" />
+                    <Label x:Name="mea9" Text="..." Grid.Column="1" Grid.Row="8" FontSize="{StaticResource ezFontSize}" />
+                </Grid>
+            </ScrollView>
+            <ScrollView>
+                <Label x:Name="instr" Text="..." FontSize="20" HeightRequest="150"/>
+            </ScrollView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
