@@ -18,7 +18,7 @@
                 Placeholder="What sounds good today?"
                 VerticalOptions="End"
                    />
-            <Button Text="Search Drink Recipes"
+            <Button Text="Search Food Recipes"
                     BackgroundColor="OrangeRed"
                     Clicked="Find_Food_Button_Clicked"
                    VerticalOptions="End"/>
