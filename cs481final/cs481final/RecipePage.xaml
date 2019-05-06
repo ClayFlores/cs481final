@@ -39,7 +39,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
-           
+            <ActivityIndicator x:Name="activity" IsRunning="True" IsEnabled="True" IsVisible="True" Color="OrangeRed" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

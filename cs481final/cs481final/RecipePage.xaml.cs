@@ -52,6 +52,9 @@ namespace cs481final
 
                 
                 RecipeListView.ItemsSource = new ObservableCollection<Meal>(recipe.Meals);
+                activity.IsRunning = false;
+                activity.IsEnabled = false;
+                activity.IsVisible = false;
             }
         }
         private async void RecipeListView_ItemTapped(object sender, ItemTappedEventArgs e)

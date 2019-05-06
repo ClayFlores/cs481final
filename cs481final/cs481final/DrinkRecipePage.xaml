@@ -30,6 +30,7 @@
                                         </Grid.ColumnDefinitions>
                                         <Image Source="{Binding strDrinkThumb}" WidthRequest="100" HeightRequest="100" HorizontalOptions="StartAndExpand" Grid.Column="0" Grid.Row="0"/>
                                         <Label Text="{Binding strDrink}" FontSize="{StaticResource ezFontSize}" HorizontalOptions="StartAndExpand" Grid.Column="1" Grid.Row="0"/>
+                                        
                                     </Grid>
                                 </StackLayout>
                             </ViewCell.View>
@@ -37,6 +38,7 @@
                     </DataTemplate>
                 </ListView.ItemTemplate>
             </ListView>
+            <ActivityIndicator x:Name="activity" IsRunning="True" IsEnabled="True" IsVisible="True" Color="OrangeRed" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

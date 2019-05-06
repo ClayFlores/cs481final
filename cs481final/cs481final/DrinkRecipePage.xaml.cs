@@ -46,6 +46,9 @@ namespace cs481final
             {
                 recipe = JsonConvert.DeserializeObject<DrinkRecipe>(jsoncontent);
                 DrinkRecipeListView.ItemsSource = new ObservableCollection<Drink>(recipe.Drinks);
+                activity.IsRunning = false;
+                activity.IsEnabled = false;
+                activity.IsVisible = false;
             }
 
         }
